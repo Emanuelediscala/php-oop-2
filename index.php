@@ -64,8 +64,8 @@ $generalcatbed = [$catBed_one, $catBed_two];
         <div class="col-md-4">
             <h3 class="text-center">Food Dog</h3>
             <?php foreach ($generaldogFood as $index => $dogfood) { ?>
-                <div class="card d-flex text-center justify-content-center align-items-center m-2 p-0 h-50">
-                    <img id="img_card" src="<?= $dogfood->imageURL ?>" class="card-img-top  h-50"  alt="...">
+                <div class="card m-2  text-center">
+                    <img id="img_card" src="<?= $dogfood->imageURL ?>" class="card-img-top m-auto "  alt="...">
                     <div class="card-body text-black">
                         <h5 class="card-title">
                             <?php echo $dogfood->name ?>
@@ -81,8 +81,8 @@ $generalcatbed = [$catBed_one, $catBed_two];
         <div class="col-md-4">
             <h3 class="text-center">Game Dog</h3>
             <?php foreach ($generaldogGame as $index => $doggame) { ?>
-                <div class="text-center d-flex flex-column justify-content-between align-items-center bg-light my-2 h-50">
-                    <img id="img_card" src="<?= $doggame->imageURL ?>" class="card-img-top"  alt="...">
+                <div class="card text-center bg-light my-2 ">
+                    <img id="img_card" src="<?= $doggame->imageURL ?>" class="card-img-top m-auto "  alt="...">
                     <div class="card-body text-black">
                         <h5 class="card-title">
                             <?php echo $doggame->name ?>
