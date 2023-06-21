@@ -58,11 +58,14 @@ $generalcatbed = [$catBed_one, $catBed_two];
 </head>
 
 <body>
-    <h1 class="text-center">Pet World</h1>
     <div class="container">
+    <div class="d-flex justify-content-around align-items-center ">
+        <h1>Pet World</h1>
+        <button class="btn btn-primary p-0">Shop</button>
+    </div>
     <div class="row">
         <div class="col-md-4">
-            <h3 class="text-center">Food Dog</h3>
+            <h3 class="text-center">Dog's Food</h3>
             <?php foreach ($generaldogFood as $index => $dogfood) { ?>
                 <div class="card m-2  text-center">
                     <img id="img_card" src="<?= $dogfood->imageURL ?>" class="card-img-top m-auto "  alt="...">
@@ -73,13 +76,14 @@ $generalcatbed = [$catBed_one, $catBed_two];
                         <p>
                             <?php echo $dogfood->description ?>
                         </p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <span class="d-block"><?php echo $dogfood->price ?></span>
+                        <a href="#" class="btn btn-primary">Buy Now</a>
                     </div>
                 </div>
             <?php } ?>
         </div>
         <div class="col-md-4">
-            <h3 class="text-center">Game Dog</h3>
+            <h3 class="text-center">Dogs'Game</h3>
             <?php foreach ($generaldogGame as $index => $doggame) { ?>
                 <div class="card text-center bg-light my-2 ">
                     <img id="img_card" src="<?= $doggame->imageURL ?>" class="card-img-top m-auto "  alt="...">
@@ -90,7 +94,26 @@ $generalcatbed = [$catBed_one, $catBed_two];
                         <p>
                             <?php echo $doggame->description ?>
                         </p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <span class="d-block"><?php echo $doggame->price ?></span>
+                        <a href="#" class="btn btn-primary">Buy Now</a>
+                    </div>
+                </div>
+            <?php } ?>
+        </div>
+        <div class="col-md-4">
+            <h3 class="text-center">Dog's Bed</h3>
+            <?php foreach ($generaldogBed as $index => $dogbed) { ?>
+                <div class="card text-center bg-light my-2 ">
+                    <img id="img_card" src="<?= $dogbed->imageURL ?>" class="card-img-top m-auto "  alt="...">
+                    <div class="card-body text-black">
+                        <h5 class="card-title">
+                            <?php echo $dogbed->name ?>
+                        </h5>
+                        <p>
+                            <?php echo $dogbed->description ?>
+                        </p>
+                        <span class="d-block"><?php echo $dogbed->price ?></span>
+                        <a href="#" class="btn btn-primary">Buy Now</a>
                     </div>
                 </div>
             <?php } ?>
