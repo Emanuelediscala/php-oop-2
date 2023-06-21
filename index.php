@@ -1,10 +1,15 @@
 <?php
+
 // INCLUDING FILES
+
 require __DIR__ . "/modals/categories.php";
 require __DIR__ . "/modals/products.php";
 require __DIR__ . "/modals/food.php";
 require __DIR__ . "/modals/animals_bed.php";
 require __DIR__ . "/modals/game.php";
+
+
+
 
 // CATEGORIES
 $dog = new categories("dog", "https://cdn-icons-png.flaticon.com/512/91/91544.png");
@@ -77,7 +82,10 @@ $generalcatbed = [$catBed_one, $catBed_two];
                             <?php echo $dogfood->description ?>
                         </p>
                         <span class="d-block"><?php echo $dogfood->price ?></span>
-                        <a href="#" class="btn btn-primary">Buy Now</a>
+                        <form method="post" action="./modals/add_to_cart.php">
+                            <input type="hidden" name="product_id" value="<?= $index ?>">
+                            <button type="submit" class="btn btn-primary" name="add_to_cart">Add to Cart</button>
+                        </form>
                     </div>
                 </div>
             <?php } ?>
@@ -95,7 +103,10 @@ $generalcatbed = [$catBed_one, $catBed_two];
                             <?php echo $doggame->description ?>
                         </p>
                         <span class="d-block"><?php echo $doggame->price ?></span>
-                        <a href="#" class="btn btn-primary">Buy Now</a>
+                        <form method="post" action="add_to_cart.php">
+                            <input type="hidden" name="product_id" value="<?= $index ?>">
+                            <button type="submit" class="btn btn-primary" name="add_to_cart">Add to Cart</button>
+                        </form>
                     </div>
                 </div>
             <?php } ?>
@@ -113,16 +124,16 @@ $generalcatbed = [$catBed_one, $catBed_two];
                             <?php echo $dogbed->description ?>
                         </p>
                         <span class="d-block"><?php echo $dogbed->price ?></span>
-                        <a href="#" class="btn btn-primary">Buy Now</a>
+                        <form method="post" action="add_to_cart.php">
+                            <input type="hidden" name="product_id" value="<?= $index ?>">
+                            <button type="submit" class="btn btn-primary" name="add_to_cart">Add to Cart</button>
+                        </form>
                     </div>
                 </div>
             <?php } ?>
         </div>
     </div>
 </div>
-
-
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
