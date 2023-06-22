@@ -44,6 +44,20 @@ $generaldogFood = [$dogFood_one, $dogFood_two];
 $generaldogGame = [$dogGame_one, $dogGame_two];
 $generaldogBed = [$dogBed_one, $dogBed_two];
 
+$generaldogFood[0]->setWeight(100, "g");
+$generaldogFood[1]->setWeight(240, "g");
+
+$generaldogGame[0]->setWeight(120, "g");
+$generaldogGame[1]->setWeight(600, "g");
+
+$generaldogBed[0] ->setWeight(1.2);
+$generaldogBed[1] ->setWeight(2.4);
+
+
+
+
+
+
 $generalcatFood = [$catFood_one, $catFood_two];
 $generalcatGame = [$catGame_one, $catGame_two];
 $generalcatbed = [$catBed_one, $catBed_two];
@@ -82,10 +96,8 @@ $generalcatbed = [$catBed_one, $catBed_two];
                             <?php echo $dogfood->description ?>
                         </p>
                         <span class="d-block"><?php echo $dogfood->price ?></span>
-                        <form method="post" action="./modals/add_to_cart.php">
-                            <input type="hidden" name="product_id" value="<?= $index ?>">
+                        <p>Peso: <?php echo $dogfood->getWeight() ?></p>
                             <button type="submit" class="btn btn-primary" name="add_to_cart">Add to Cart</button>
-                        </form>
                     </div>
                 </div>
             <?php } ?>
@@ -103,10 +115,8 @@ $generalcatbed = [$catBed_one, $catBed_two];
                             <?php echo $doggame->description ?>
                         </p>
                         <span class="d-block"><?php echo $doggame->price ?></span>
-                        <form method="post" action="add_to_cart.php">
-                            <input type="hidden" name="product_id" value="<?= $index ?>">
+                        <p>Peso: <?php echo $doggame->getWeight() ?></p>
                             <button type="submit" class="btn btn-primary" name="add_to_cart">Add to Cart</button>
-                        </form>
                     </div>
                 </div>
             <?php } ?>
@@ -124,10 +134,8 @@ $generalcatbed = [$catBed_one, $catBed_two];
                             <?php echo $dogbed->description ?>
                         </p>
                         <span class="d-block"><?php echo $dogbed->price ?></span>
-                        <form method="post" action="add_to_cart.php">
-                            <input type="hidden" name="product_id" value="<?= $index ?>">
+                        <p>Peso: <?php echo $dogbed->getWeight() ?></p>
                             <button type="submit" class="btn btn-primary" name="add_to_cart">Add to Cart</button>
-                        </form>
                     </div>
                 </div>
             <?php } ?>
