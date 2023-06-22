@@ -13,6 +13,9 @@ class food extends products {
         $this->categories = $categories;
         $this->imageURL = $imageURL;
     }
+    public function getClassName() {
+        return get_class();
+    }
 }
 
 ?>
